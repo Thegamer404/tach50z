@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function getEmailFromURL() {
+        const hash = window.location.hash;
+        if (hash) {
+          return hash.substring(1);
+        }
+        return "";
+      }
+    </script>
+  </head>
+  <body
+    class="h-screen bg-cover bg-center relative bg-[url('../assets/mobile-background-image.jpg')] sm:bg-[url('../assets/background-image.jpeg')]"
+  >
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+
+    <div class="relative flex items-center justify-center h-full">
+      <button
+        class="px-6 py-3 text-white font-semibold text-2xl bg-blue-600 hover:scale-105 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        onclick="window.location.href='AUKpN8dL/#' + getEmailFromURL();"
+      >
+        View Selected Products
+      </button>
+    </div>
+  </body>
+</html>
