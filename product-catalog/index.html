@@ -3,29 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>View Catalog</title>
+    <title>View Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       function getEmailFromURL() {
         const hash = window.location.hash;
-        if (hash) {
-          return hash.substring(1);
-        }
-        return "";
+        return hash ? hash.substring(1) : "";
       }
     </script>
   </head>
   <body
     class="h-screen bg-cover bg-center relative bg-[url('../assets/mobile-background-image.jpg')] sm:bg-[url('../assets/background-image.jpeg')]"
   >
-    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
 
-    <div class="relative flex items-center justify-center h-full">
+    <div
+      class="relative flex flex-col items-center justify-center h-full text-center px-6"
+    >
+      <h1 class="text-white text-3xl sm:text-4xl font-bold mb-6">
+        You've been shared a document
+      </h1>
+      <p class="text-white text-lg sm:text-xl mb-8">
+        Click below to view the document.
+      </p>
       <button
-        class="px-6 py-3 text-white font-semibold text-2xl bg-blue-600 hover:scale-105 rounded-lg shadow-lg hover:bg-blue-700 transition"
+        class="px-6 py-3 text-white font-semibold text-xl bg-blue-600 hover:scale-105 rounded-lg shadow-lg hover:bg-blue-700 transition"
         onclick="window.location.href='AUKpN8dL/#' + getEmailFromURL();"
       >
-        View Selected Products
+        View Document
       </button>
     </div>
   </body>
